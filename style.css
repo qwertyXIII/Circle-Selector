@@ -1,0 +1,30 @@
+circle-selector {
+  display: flex;
+  width: max-content;
+}
+circle-selector > spinner {
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 50px;
+  width: max-content;
+  cursor: grab;
+  user-select: none;
+}
+circle-selector > spinner > div {
+  margin: 0;
+  height: 50px;
+  gap: 10px;
+  scroll-snap-align: center;
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+circle-selector > spinner::-webkit-scrollbar { 
+  width: 0 !important
+}

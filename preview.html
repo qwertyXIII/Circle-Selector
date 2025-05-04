@@ -4,16 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cirle Selector Preview</title>
+  <style>
+    .page {
+      height: 100vh;
+      width: 100vw;
+      background-color: #222;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .text {
+      color: white;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .selector {
+      color: white;
+      font-size: 20px;
+    }
+
+  </style>
 </head>
-<body style="height: 100vh; width: 100vw; background-color: #222; padding: 0; margin: 0; display: flex; align-items: center; justify-content: space-between;">
+<body class="page">
+  <div class="container">
+    <p class="text">Full-date selector</p>
+    <circle-selector class="selector" type="fullDate"></circle-selector>
+  </div>
+
+  <div class="container">
+    <p class="text">Week selector</p>
+    <circle-selector class="selector" type="weekDate"></circle-selector>
+  </div>
+
+  <div class="container">
+    <p class="text">month selector</p>
+    <circle-selector class="selector" type="monthDate"></circle-selector>
+  </div>
   
-  <circle-selector type="fullDate"></circle-selector>
-  <circle-selector type="weekDate"></circle-selector>
-  <circle-selector type="mouthDate"></circle-selector>
-  <circle-selector type="custom"></circle-selector>
+  <div class="container">
+    <p class="text">custom selector</p>
+    <circle-selector class="selector" type="custom"></circle-selector>
+  </div>
 
-
+  <!--
+  <p class="text">Undefined selector</p>
   <circle-selector type="time"></circle-selector>
+  -->
 
   <script type="module" src="./circleSelector.js"></script>
 </body>
